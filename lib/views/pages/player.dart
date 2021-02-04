@@ -7,6 +7,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:music/models/music_json.dart';
 import 'package:music/ui/player.dart';
 import 'package:music/views/authentification/Login.dart';
+import 'package:music/views/pages/Home.dart';
 import 'package:music/views/pages/navigator.dart';
 
 class Music_Page extends StatefulWidget {
@@ -644,7 +645,7 @@ class Music2 extends State<Music_Page2> {
   }
   mainy() {
     for(var i=0; i<music.length; i++){
-      if(music[i].category.toUpperCase().contains(this.name.toUpperCase()) || music[i].title.toUpperCase().contains(this.name.toUpperCase())  ){
+      if(music[i].category.toUpperCase().contains(this.name.toUpperCase()) || music[i].category.toUpperCase().contains(this.name.toUpperCase()) || music[i].title.toUpperCase().contains(this.name.toUpperCase())  ){
         music2.add(music[i]);
         DatabaseHelper.internal().save_searching(user_email,music[i].artist);
       }
@@ -655,6 +656,7 @@ class Music2 extends State<Music_Page2> {
     if(music2.isEmpty){
       setState(() {
         song_value="";
+        Home.globalKey.currentState.son();
       });
     }
   }
