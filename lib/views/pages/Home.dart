@@ -255,6 +255,7 @@ class Home_Page extends State<Home> {
           return SolidBottomSheet(
               controller: _controller,
             toggleVisibilityOnTap: true,
+            showOnAppear: true,
               maxHeight: _panelMaxSize-100,
               headerBar: Container(
                   color: Colors.black,
@@ -276,6 +277,5 @@ class Home_Page extends State<Home> {
 
   }
 }
-
 
 
