@@ -71,7 +71,7 @@ class Navigator_Page extends State<Navigate> {
             labelBackgroundColor: Color(0xFF801E48)),
 
         SpeedDialChild(
-            child: Icon(Icons.find_replace),
+            child: Icon(Icons.info),
             backgroundColor: Color(0xFF801E48),
             onTap: () {
               BuildContext dialogContext;
@@ -81,17 +81,18 @@ class Navigator_Page extends State<Navigate> {
                 builder: (BuildContext context) {
                   dialogContext = context;
                   return Dialog(
-                    child: MyApp(),
+                    child: InfoPage(),
                   );
                 },
               );
             },
-            label: 'Find',
+            label: 'Credit',
             labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
                 fontSize: 16.0),
             labelBackgroundColor: Color(0xFF801E48)),
+
         SpeedDialChild(
             child: Icon(Icons.account_circle),
             backgroundColor: Color(0xFF801E48),
@@ -114,6 +115,30 @@ class Navigator_Page extends State<Navigate> {
                 color: Colors.white,
                 fontSize: 16.0),
             labelBackgroundColor: Color(0xFF801E48)),
+
+        SpeedDialChild(
+            child: Icon(Icons.edit),
+            backgroundColor: Color(0xFF801E48),
+            onTap: () {
+              BuildContext dialogContext;
+              return showDialog(
+                context: context,
+                barrierDismissible: true,
+                builder: (BuildContext context) {
+                  dialogContext = context;
+                  return Dialog(
+                    child: Profile_Change(),
+                  );
+                },
+              );
+            },
+            label: 'Customize',
+            labelStyle: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+                fontSize: 16.0),
+            labelBackgroundColor: Color(0xFF801E48)),
+
         SpeedDialChild(
             child: Icon(Icons.face),
             backgroundColor: Color(0xFF801E48),
@@ -130,15 +155,16 @@ class Navigator_Page extends State<Navigate> {
                 },
               );
             },
-            label: 'Feeling',
+            label: 'Mood',
             labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
                 fontSize: 16.0),
             labelBackgroundColor: Color(0xFF801E48)),
+
 
         SpeedDialChild(
-            child: Icon(Icons.info),
+            child: Icon(Icons.find_replace),
             backgroundColor: Color(0xFF801E48),
             onTap: () {
               BuildContext dialogContext;
@@ -148,40 +174,18 @@ class Navigator_Page extends State<Navigate> {
                 builder: (BuildContext context) {
                   dialogContext = context;
                   return Dialog(
-                    child: InfoPage(),
-                  );
-                },
-              );
-              },
-            label: 'Info',
-            labelStyle: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
-                fontSize: 16.0),
-            labelBackgroundColor: Color(0xFF801E48)),
-
-         SpeedDialChild(
-            child: Icon(Icons.edit),
-            backgroundColor: Color(0xFF801E48),
-            onTap: () {
-              BuildContext dialogContext;
-              return showDialog(
-                context: context,
-                barrierDismissible: true,
-                builder: (BuildContext context) {
-                  dialogContext = context;
-                  return Dialog(
-                    child: Profile_Change(),
+                    child: MyApp(),
                   );
                 },
               );
             },
-            label: 'Edit Info',
+            label: 'Recognize',
             labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
                 fontSize: 16.0),
             labelBackgroundColor: Color(0xFF801E48)),
+
 
         SpeedDialChild(
             child: Icon(Icons.search),
@@ -194,7 +198,7 @@ class Navigator_Page extends State<Navigate> {
                 ),
               );
             },
-            label: 'Search Music',
+            label: 'Search',
             labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
