@@ -9,4 +9,5 @@ It is the music application. It contains that:
 
 ## Getting Started
 
-![alt-text-1](views/login.png "title-1") ![alt-text-2](views/create.png "title-2") ![alt-text-3](views/create.png "title-3") 
+![alt-text-1](views/main_page.png=250x "title-1") ![alt-text-2](views/create.png=250x "title-2") ![alt-text-3](views/forgot_password.png=250x "title-3") 
+![alt-text-1](views/main_page.png=250x "title-1") ![alt-text-2](views/create.png=250x "title-2") ![alt-text-3](views/forgot_password.png=250x "title-3") 
